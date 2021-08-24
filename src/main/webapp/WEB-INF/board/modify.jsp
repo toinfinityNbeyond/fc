@@ -11,7 +11,7 @@
     <title>Title</title>
 </head>
 <body>
-<form action="/board/modify" method="post">
+<form action="/board/modify.do" method="post">
     <input type="text" name="bno" value="bno">
     <input type="text" name="title" value="title">
     <input type="text" name="content" value="content">

@@ -143,11 +143,16 @@ public class BoardController {
         return "re:/board/list.do";
     }
 
-    @PostMapping("/board/delete.do")
+    @PostMapping("/board/read.do")
     public String delete(HttpServletRequest request, HttpServletResponse response)throws Exception{
 
         System.out.println("board register post....do");
 
+        Integer bno = Integer.parseInt(request.getParameter("bno")); //request string이라서 Integer.parseInt 로 감싸줌.
+
+        log.info("bno" + bno);
+
+        BoardService.INSTANCE.remove(bno);
 
         return "re:/board/list.do";
     }
